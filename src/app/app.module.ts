@@ -9,6 +9,9 @@ import { HomeComponent } from './modules/home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { LoginComponent } from './modules/login/login.component';
+import { FullpageadminComponent } from './layouts/fullpageadmin/fullpageadmin.component';
+import { AdminComponent } from './modules/admin/admin.component';
+import { FullpageadminModule } from './layouts/fullpageadmin/fullpageadmin.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,8 @@ import { LoginComponent } from './modules/login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DefaultModule
+    DefaultModule,
+    FullpageadminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
