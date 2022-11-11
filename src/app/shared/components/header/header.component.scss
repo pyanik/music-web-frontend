@@ -1,4 +1,17 @@
-:host{
-    background: #ddd;
+@import '../../../../variables.scss';
+:host {
+    background: $darkgray;
     padding: 20px;
+}
+.logo {
+    font-size: 22px;
+    color: $yellow;
+}
+.logoIcon {
+    font-size: 30px;
+    color: $yellow;
+}
+button {
+    background: $yellow;
+    color: $darkslate;
 }

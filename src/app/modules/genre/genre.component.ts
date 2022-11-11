@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { GenreService } from './genre.service';
+import { Genre } from './model/genre';
+
 
 @Component({
   selector: 'app-genre',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenreComponent implements OnInit {
 
-  constructor() { }
+  genres: Genre[] = [];
+
+  constructor(private genreService: GenreService) { }
 
   ngOnInit(): void {
+    this.getGenres();
+  }
+
+  getGenres() {
+    this.genreService.getGenres()
+    .subscribe(genres => this.genres = genres);
   }
 
 }
