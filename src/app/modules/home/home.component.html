@@ -1,1 +1,28 @@
-<p>home works!</p>
+<h1>Promowame albumy</h1>
+
+<mat-card *ngFor="let album of page.content">
+    <div flexLayout="row">
+            <!-- <mat-card-title><a routerLink="{{'/products/' + album.id}}">{{album.title}}</a></mat-card-title> -->
+            <mat-card-content flexLaoyout="row">
+                    <div routerLink="{{'/products/' + album.id}}">
+                        <img *ngIf="!album?.cover" src="/assets/cover-placeholder.png" mat-card-xl-image class="albumImage">
+                    </div>
+                    <div class="albumContent">
+                        <p class="albumTitle">
+                            <a routerLink="{{'/products/' + album.id}}">{{album.title}}</a>
+                        </p>
+                        <p>Artist name: {{album.artistName}}</p>
+                        <p>Release Date: {{album.releaseDate}}</p>
+                        <p>Genre: <a routerLink="{{'/genres/' + album.genre}}">{{album.genre}}</a></p>
+                    </div>
+            </mat-card-content>
+        </div>
+</mat-card>
+
+<mat-paginator *ngIf="page && page.totalElements > 0"
+            [length]="page.totalElements"
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page"
+              (page)="onPageEvent($event)">
+</mat-paginator>

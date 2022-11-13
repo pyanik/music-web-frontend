@@ -1,0 +1,33 @@
+@import '../../../variables.scss';
+mat-card {
+    margin-bottom: 25px;
+}
+
+.albumContent {
+    width: 1200px;
+    margin-left: 70px;
+    font-size: large;
+ }
+
+ .albumTitle {
+    font-size: x-large;
+ }
+
+mat-card-content {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: $yellow;
+}
+
+.example-card {
+    max-width: 1200px;
+    margin-bottom: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: $yellow;
+}
